@@ -1,13 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+/* for note item */
+
+.container {
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header button {
+    font-size: 1rem;
+    padding: .8rem;
+    background-color: #64748b;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: #fff;
+}
+
+.theme {
+    padding-left: .5rem;
+}
+
+.note {
+    background-color: #fef68a;
+    border-radius: 10px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+    margin-bottom: 1rem;
+}
+
+.note.new {
+    background-color: aqua;
+}
+
+.note.update {
+    background-color: rgb(230, 168, 168);
+}
+
+.note textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 1.5rem;
+}
+
+.note textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.note-footer span {
+    font-size: .9rem;
+}
+
+.delete {
+    padding-left: 1rem;
+}
+
+.saveBtn {
+    background-color: #64748b;
+    border: none;
+    outline: none;
+    padding: .7rem;
+    border-radius: 2rem;
+    font-size: .8rem;
+    color: #fff;
+}
+
+.saveBtn:hover {
+    background-color: #4e5764;
+}
+
+.noteList {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr));
+}
+
+
+/* search */
+
+.search {
+    margin-block: 2rem;
+    background-color: #dadce1;
+    padding: .8rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    padding-left: .5rem;
+    width: 100%;
+}
+
+
+/* dark mode */
+
+.dark-mode {
+    background-color: black;
+}
+
+.dark-mode h1 {
+    color: white;
 }
